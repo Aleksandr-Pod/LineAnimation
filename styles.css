@@ -8,12 +8,15 @@ h1 {text-align: center;}
 }
 
 .line {
-    fill: red;
+    stroke: red;
     width: 800px;
     height: 300px;
 }
-/* .icon {
-    width: 32px;
-    height: 32px;
-    fill: black;
-} */
+.icon-line path {
+    fill: none;
+    stroke: green;
+    stroke-width: 5px;
+}
+.icon-astronaut path {
+fill: red;
+}
