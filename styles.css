@@ -15,8 +15,24 @@ h1 {text-align: center;}
 .icon-line path {
     fill: none;
     stroke: green;
-    stroke-width: 5px;
+    stroke-dasharray: 3200;
+    stroke-dashoffset: 3200;
+    stroke-width: 5;
+    animation: draw 20s linear forwards;
+
 }
+
 .icon-astronaut path {
-fill: red;
+    fill: red;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: draw 20s linear forwards;
+}
+
+
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
