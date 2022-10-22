@@ -1,0 +1,19 @@
+h1 {text-align: center;}
+
+.section {
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    width: 1000px;
+    height: 600px;
+}
+
+.line {
+    fill: red;
+    width: 800px;
+    height: 300px;
+}
+/* .icon {
+    width: 32px;
+    height: 32px;
+    fill: black;
+} */
