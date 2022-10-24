@@ -2,37 +2,61 @@ h1 {text-align: center;}
 
 .section {
     margin: 0 auto;
-    background-color: blanchedalmond;
     width: 1000px;
     height: 600px;
 }
 
-.line {
-    stroke: red;
-    width: 800px;
-    height: 300px;
-}
-.icon-line path {
-    fill: none;
-    stroke: green;
-    stroke-dasharray: 3200;
-    stroke-dashoffset: 3200;
-    stroke-width: 5;
-    animation: draw 20s linear forwards;
-
-}
-
 .icon-astronaut path {
     fill: red;
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: draw 20s linear forwards;
+    stroke: black;
+    stroke-width: 0.5;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: draw 5s linear forwards;
 }
-
-
+.icon-astronaut:hover path {
+    animation: dash-running 5s; 
+}
+.icon-hello path {
+    fill: white;
+    stroke: orangered;
+    stroke-width: 3;
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+    animation: draw 10s linear forwards;
+}
+.icon-hello:hover path {
+    animation: flash 5s;
+}
 
 @keyframes draw {
     100% {
+        fill: orangered;
         stroke-dashoffset: 0;
     }
+}
+
+@keyframes dash-running {
+    0% {
+        stroke-dasharray: 10;
+        stroke-dashoffset: 120;
+    }
+    100% {
+        stroke-dasharray: 10;
+        stroke-dashoffset: 0;
+        fill: green;
+    }
+}
+@keyframes flash {
+    0% {fill: orangered}
+    10% {fill: blue}
+    20% {fill: orangered}
+    30% {fill: blue}
+    40% {fill: orangered}
+    50% {fill: blue}
+    60% {fill: orangered}
+    70% {fill: blue}
+    80% {fill: orangered}
+    90% {fill: blue}
+    100% {fill: blue}
 }
